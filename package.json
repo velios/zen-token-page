@@ -1,0 +1,8 @@
+{
+	"name": "zen-token-page",
+	"private": true,
+	"scripts": {
+		"start": "bun src/server.ts",
+		"test": "bun test"
+	}
+}

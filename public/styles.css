@@ -1,0 +1,38 @@
+:root{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#17233b;background:#f5f7fa;font-synthesis:none}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;min-height:100dvh}
+button,input{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible{outline:3px solid #83a9ff;outline-offset:3px}
+.main{width:min(520px,calc(100% - 32px));margin:clamp(32px,8vh,72px) auto 40px}
+.intro{margin-bottom:24px}
+h1{margin:0;font-size:clamp(27px,5vw,34px);line-height:1.2;letter-spacing:-.04em}
+.lead{margin:10px 0 0;max-width:440px;color:#677286;font-size:15px;line-height:1.6}
+.panel{padding:24px;border:1px solid #e0e5ed;border-radius:16px;background:#fff;box-shadow:0 4px 20px #17233b04}
+.button{min-height:44px;border:0;border-radius:9px;background:transparent;color:#52647f;padding:10px 12px;font-size:14px;font-weight:600}
+.button:hover{background:#f0f4fa}
+.button.primary{width:100%;background:#3976e8;color:#fff;font-size:15px}
+.button.primary:hover{background:#2f68d5}
+.account-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.field-label{display:block;color:#56647a;font-size:13px;font-weight:600}
+.account-heading .button{min-height:36px;padding:6px 0;color:#3970c8;font-size:13px}
+.account-list{display:grid;gap:6px}
+.account{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-width:0;min-height:48px;padding:12px;border:1px solid #e2e7ef;border-radius:9px;background:#fff;color:#43516a;text-align:left}
+.account span{min-width:0;overflow-wrap:anywhere;font-size:14px}
+.account small{flex-shrink:0;font-size:12px;color:#728098}
+.account:hover{background:#f6f8fc}
+.account[aria-pressed="true"]{border-color:#9fbbef;background:#eef4ff;color:#2155aa;box-shadow:inset 3px 0 #3976e8}
+.account[aria-pressed="true"] span{font-weight:600}
+.token-label{margin:24px 0 10px}
+.token-row{position:relative}
+.token-input{width:100%;min-width:0;height:52px;border:1px solid #dbe2ed;border-radius:9px;background:#f8fafc;padding:0 94px 0 14px;color:#263b60;font:15px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.token-row .button{position:absolute;right:4px;top:4px;min-height:44px;font-size:13px}
+.actions{margin-top:16px}
+.subactions{margin-top:12px;text-align:center}
+.button.danger{color:#87606a;font-size:13px}
+.button.danger:hover{color:#a53c4a;background:#fff2f3}
+.status{margin:0 0 20px;padding:12px 14px;border:1px solid #c9dbfb;border-radius:9px;background:#f0f6ff;color:#234a8b;font-size:14px;line-height:1.5}
+.status:empty{display:none}
+@media(max-width:480px){.main{margin-top:32px}.panel{padding:20px}.intro{margin-bottom:24px}}
+@media(max-width:300px){.panel{padding:14px}.account-heading{align-items:flex-start;flex-direction:column;gap:0}}

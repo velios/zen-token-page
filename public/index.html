@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Токены ZenMoney</title>
+	<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+	<main class="main">
+		<div class="intro">
+			<h1>Токены ZenMoney</h1>
+			<p class="lead">Получите API-токен. Токены хранятся только в браузере.</p>
+		</div>
+		<p class="status" id="status" role="status" aria-live="polite"></p>
+		<section class="panel empty" id="empty" aria-label="Получение токена">
+			<button class="button primary" id="empty-add" type="button">Войти через ZenMoney</button>
+		</section>
+		<section class="panel" id="dashboard" aria-label="Токен аккаунта" hidden>
+			<div class="account-heading">
+				<span class="field-label" id="accounts-label">Аккаунты</span>
+				<button class="button" id="add" type="button" hidden>Добавить аккаунт</button>
+			</div>
+			<div class="account-list" id="accounts" role="group" aria-labelledby="accounts-label"></div>
+			<label class="field-label token-label" for="token">API-токен</label>
+			<div class="token-row">
+				<input class="token-input" id="token" type="password" readonly spellcheck="false" autocomplete="off">
+				<button class="button" id="reveal" type="button">Показать</button>
+			</div>
+			<div class="actions"><button class="button primary" id="copy" type="button" aria-live="polite">Скопировать</button></div>
+			<div class="subactions"><button class="button danger" id="remove" type="button">Удалить из браузера</button></div>
+		</section>
+	</main>
+	<script src="/app.js"></script>
+</body>
+</html>
