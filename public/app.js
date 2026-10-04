@@ -190,8 +190,8 @@ render();
       const data = await verified.json();
       const users = Array.isArray(data?.user) ? data.user.filter(user => user?.parent === null) : [];
       const user = users[0];
-      if (users.length !== 1 || !Number.isSafeInteger(user?.id) || user.id <= 0 || typeof user.login !== 'string') throw new Error();
-      profile = {id: user.id, login: user.login, accessToken};
+      if (users.length !== 1 || !Number.isSafeInteger(user?.id) || user.id <= 0) throw new Error();
+      profile = {id: user.id, login: typeof user.login === 'string' ? user.login : '', accessToken};
     } catch {
       temporaryToken = accessToken;
       activeId = 0;
